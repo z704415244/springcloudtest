@@ -9,12 +9,12 @@ import org.springframework.web.client.RestTemplate;
  * @Date 2019-03-14
  */
 @Service
-public class TestService {
+public class HelloService {
 
     @Autowired
     private RestTemplate restTemplate;
 
     public String hello(String name){
-        return restTemplate.getForObject("http://127.0.0.1:8763/home?name=" + name,  String.class);
+        return restTemplate.getForObject("http://eureka-client/hello/" + name, String.class);
     }
 }

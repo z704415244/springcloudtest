@@ -1,9 +1,9 @@
 server:
-  port: 8763
+  port: 8762
 
 spring:
   application:
-    name: com.alibet.ribbon.service-client
+    name: eureka-client
 
 eureka:
   client:

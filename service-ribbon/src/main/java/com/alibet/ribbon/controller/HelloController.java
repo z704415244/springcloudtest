@@ -21,17 +21,7 @@ public class HelloController {
 
     @GetMapping("/hello/{name}")
     public String hello(@PathVariable String name){
-        return helloService.hello(name);
-    }
-
-    @GetMapping("/hello/repeat/{name}")
-    public List<String> helloRepeated(@PathVariable String name){
-        List<String> list = new ArrayList<>();
-        StringBuilder hello = new StringBuilder();
-        for (int i = 0; i < 100; i++){
-            list.add(helloService.hello(name));
-        }
-        return list;
+        return helloService.hello(name) + "(Ribbon)";
     }
 
 }
